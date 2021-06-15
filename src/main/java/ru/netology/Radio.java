@@ -1,31 +1,31 @@
 package ru.netology;
 
 public class Radio {
-    int NUMBER_MAX = 9;
-    int NUMBER_MIN = 0;
-    int VOLUME_MAX = 10;
-    int VOLUME_MIN = 0;
+    int FINAL_NUMBER_MAX = 9;
+    int FINAL_NUMBER_MIN = 0;
+    int FINAL_VOLUME_MAX = 10;
+    int FINAL_VOLUME_MIN = 0;
 
-    int number=NUMBER_MIN;
-    int volume=VOLUME_MIN;
-    boolean on=false;
+    int number = FINAL_NUMBER_MIN;
+    int volume = FINAL_VOLUME_MIN;
+    boolean on = false;
 
     public void setNumber(int number) {
-        if (number >= NUMBER_MIN && number <= NUMBER_MAX)
+        if (number >= FINAL_NUMBER_MIN && number <= FINAL_NUMBER_MAX)
             this.number = number;
     }
 
     public void setNumberNext() {
-        if (number == NUMBER_MAX) {
-            number = NUMBER_MIN;
+        if (number == FINAL_NUMBER_MAX) {
+            number = FINAL_NUMBER_MIN;
         } else {
             number = number + 1;
         }
     }
 
     public void setNumberPrev() {
-        if (number == NUMBER_MIN) {
-            number = NUMBER_MAX;
+        if (number == FINAL_NUMBER_MIN) {
+            number = FINAL_NUMBER_MAX;
         } else {
             number = number - 1;
         }
@@ -36,13 +36,13 @@ public class Radio {
     }
 
     public void setVolumePlus() {
-        if (volume < VOLUME_MAX) {
+        if (volume < FINAL_VOLUME_MAX) {
             volume = volume + 1;
         }
     }
 
     public void setVolumeMinus() {
-        if (volume > VOLUME_MIN) {
+        if (volume > FINAL_VOLUME_MIN) {
             volume = volume - 1;
         }
     }

@@ -1,22 +1,39 @@
 package ru.netology;
 
 public class Radio {
-    int FINAL_NUMBER_MAX = 9;
-    int FINAL_NUMBER_MIN = 0;
-    int FINAL_VOLUME_MAX = 10;
-    int FINAL_VOLUME_MIN = 0;
+    public int numberMax;
+    public int FINAL_NUMBER_MIN = 0;
+    public int FINAL_VOLUME_MAX = 100;
+    public int FINAL_VOLUME_MIN = 0;
 
-    int number = FINAL_NUMBER_MIN;
-    int volume = FINAL_VOLUME_MIN;
-    boolean on = false;
+    public int number; //current value of the station number
+    public int volume; //current value of the sound volume
+    public boolean on;
+
+    public Radio() {
+        this.numberMax = 10;
+        this.number = FINAL_NUMBER_MIN;
+        this.volume = FINAL_VOLUME_MIN;
+        on = false;
+    }
+
+    public Radio(
+            int numberMax
+    ) {
+        this.numberMax = numberMax;
+        this.number = FINAL_NUMBER_MIN;
+        this.volume = FINAL_VOLUME_MIN;
+        on = false;
+    }
+
 
     public void setNumber(int number) {
-        if (number >= FINAL_NUMBER_MIN && number <= FINAL_NUMBER_MAX)
+        if (number >= FINAL_NUMBER_MIN && number <= numberMax)
             this.number = number;
     }
 
     public void setNumberNext() {
-        if (number == FINAL_NUMBER_MAX) {
+        if (number == numberMax) {
             number = FINAL_NUMBER_MIN;
         } else {
             number = number + 1;
@@ -25,7 +42,7 @@ public class Radio {
 
     public void setNumberPrev() {
         if (number == FINAL_NUMBER_MIN) {
-            number = FINAL_NUMBER_MAX;
+            number = numberMax;
         } else {
             number = number - 1;
         }

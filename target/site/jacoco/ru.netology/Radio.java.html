@@ -1,62 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">smart-house</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums">package ru.netology;
 
-<span class="fc" id="L3">public class Radio {</span>
-<span class="fc" id="L4">    int FINAL_NUMBER_MAX = 9;</span>
-<span class="fc" id="L5">    int FINAL_NUMBER_MIN = 0;</span>
-<span class="fc" id="L6">    int FINAL_VOLUME_MAX = 10;</span>
-<span class="fc" id="L7">    int FINAL_VOLUME_MIN = 0;</span>
+public class Radio {
+    public int numberMax;
+<span class="pc" id="L5">    public int FINAL_NUMBER_MIN = 0;</span>
+<span class="pc" id="L6">    public int FINAL_VOLUME_MAX = 100;</span>
+<span class="pc" id="L7">    public int FINAL_VOLUME_MIN = 0;</span>
 
-<span class="fc" id="L9">    int number = FINAL_NUMBER_MIN;</span>
-<span class="fc" id="L10">    int volume = FINAL_VOLUME_MIN;</span>
-<span class="fc" id="L11">    boolean on = false;</span>
+    public int number; //current value of the station number
+    public int volume; //current value of the sound volume
+    public boolean on;
+
+<span class="fc" id="L13">    public Radio() {</span>
+<span class="fc" id="L14">        this.numberMax = 10;</span>
+<span class="fc" id="L15">        this.number = FINAL_NUMBER_MIN;</span>
+<span class="fc" id="L16">        this.volume = FINAL_VOLUME_MIN;</span>
+<span class="fc" id="L17">        on = false;</span>
+<span class="fc" id="L18">    }</span>
+
+    public Radio(
+            int numberMax
+<span class="nc" id="L22">    ) {</span>
+<span class="nc" id="L23">        this.numberMax = numberMax;</span>
+<span class="nc" id="L24">        this.number = FINAL_NUMBER_MIN;</span>
+<span class="nc" id="L25">        this.volume = FINAL_VOLUME_MIN;</span>
+<span class="nc" id="L26">        on = false;</span>
+<span class="nc" id="L27">    }</span>
+
 
     public void setNumber(int number) {
-<span class="fc bfc" id="L14" title="All 4 branches covered.">        if (number &gt;= FINAL_NUMBER_MIN &amp;&amp; number &lt;= FINAL_NUMBER_MAX)</span>
-<span class="fc" id="L15">            this.number = number;</span>
-<span class="fc" id="L16">    }</span>
+<span class="fc bfc" id="L31" title="All 4 branches covered.">        if (number &gt;= FINAL_NUMBER_MIN &amp;&amp; number &lt;= numberMax)</span>
+<span class="fc" id="L32">            this.number = number;</span>
+<span class="fc" id="L33">    }</span>
 
     public void setNumberNext() {
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (number == FINAL_NUMBER_MAX) {</span>
-<span class="fc" id="L20">            number = FINAL_NUMBER_MIN;</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (number == numberMax) {</span>
+<span class="fc" id="L37">            number = FINAL_NUMBER_MIN;</span>
         } else {
-<span class="fc" id="L22">            number = number + 1;</span>
+<span class="fc" id="L39">            number = number + 1;</span>
         }
-<span class="fc" id="L24">    }</span>
+<span class="fc" id="L41">    }</span>
 
     public void setNumberPrev() {
-<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (number == FINAL_NUMBER_MIN) {</span>
-<span class="fc" id="L28">            number = FINAL_NUMBER_MAX;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (number == FINAL_NUMBER_MIN) {</span>
+<span class="fc" id="L45">            number = numberMax;</span>
         } else {
-<span class="fc" id="L30">            number = number - 1;</span>
+<span class="fc" id="L47">            number = number - 1;</span>
         }
-<span class="fc" id="L32">    }</span>
+<span class="fc" id="L49">    }</span>
 
     public int getNumber() {
-<span class="fc" id="L35">        return number;</span>
+<span class="fc" id="L52">        return number;</span>
     }
 
     public void setVolumePlus() {
-<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (volume &lt; FINAL_VOLUME_MAX) {</span>
-<span class="fc" id="L40">            volume = volume + 1;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        if (volume &lt; FINAL_VOLUME_MAX) {</span>
+<span class="fc" id="L57">            volume = volume + 1;</span>
         }
-<span class="fc" id="L42">    }</span>
+<span class="fc" id="L59">    }</span>
 
     public void setVolumeMinus() {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (volume &gt; FINAL_VOLUME_MIN) {</span>
-<span class="fc" id="L46">            volume = volume - 1;</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (volume &gt; FINAL_VOLUME_MIN) {</span>
+<span class="fc" id="L63">            volume = volume - 1;</span>
         }
-<span class="fc" id="L48">    }</span>
+<span class="fc" id="L65">    }</span>
 
     public int getVolume() {
-<span class="fc" id="L51">        return volume;</span>
+<span class="fc" id="L68">        return volume;</span>
     }
 
     public boolean isOn() {
-<span class="fc" id="L55">        return on;</span>
+<span class="fc" id="L72">        return on;</span>
     }
 
     public void setOn(boolean on) {
-<span class="fc" id="L59">        this.on = on;</span>
-<span class="fc" id="L60">    }</span>
+<span class="fc" id="L76">        this.on = on;</span>
+<span class="fc" id="L77">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

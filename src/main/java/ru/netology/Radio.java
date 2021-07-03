@@ -1,5 +1,6 @@
 package ru.netology;
 
+
 import lombok.*;
 
 @NoArgsConstructor
@@ -17,7 +18,6 @@ public class Radio {
     boolean on = false;
     int number; //current value of the station number
     int volume; //current value of the sound volume
-
 
     public void setNumber(int number) {
         if (number >= FINAL_NUMBER_MIN && number <= numberMax)

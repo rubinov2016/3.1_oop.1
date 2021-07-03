@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.RadioTest" time="0.255" tests="21" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.RadioTest" time="0.08" tests="22" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire17462528542517531637\surefirebooter18356169443425361665.jar C:\Users\Lenovo\AppData\Local\Temp\surefire17462528542517531637 2021-06-30T22-30-13_335-jvmRun1 surefire11340639402840167719tmp surefire_06571230575032795961tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6050803036753240461\surefirebooter9937282901176036374.jar C:\Users\Lenovo\AppData\Local\Temp\surefire6050803036753240461 2021-07-03T11-32-51_140-jvmRun1 surefire9546860279715376913tmp surefire_015647340957930855586tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lenovo\OneDrive\!Personal_Docs\!!Coursera\!Netology\!Java\GitFolder\3.1_oop.1\smart-house\target\test-classes;C:\Users\Lenovo\OneDrive\!Personal_Docs\!!Coursera\!Netology\!Java\GitFolder\3.1_oop.1\smart-house\target\classes;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar;C:\Users\Lenovo\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire17462528542517531637\surefirebooter18356169443425361665.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire6050803036753240461\surefirebooter9937282901176036374.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9"/>
@@ -61,25 +61,26 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldSetNumberPrevMax" classname="ru.netology.RadioTest" time="0.05"/>
-  <testcase name="shouldSetNumberPrevMid" classname="ru.netology.RadioTest" time="0.002"/>
-  <testcase name="shouldSetNumberPrevMin" classname="ru.netology.RadioTest" time="0.01"/>
+  <testcase name="shouldSetNumberPrevMax" classname="ru.netology.RadioTest" time="0.028"/>
+  <testcase name="shouldSetNumberPrevMid" classname="ru.netology.RadioTest" time="0.001"/>
+  <testcase name="shouldSetNumberPrevMin" classname="ru.netology.RadioTest" time="0"/>
   <testcase name="shouldSetVolumeMinusMax" classname="ru.netology.RadioTest" time="0"/>
-  <testcase name="shouldSetVolumeMinusMid" classname="ru.netology.RadioTest" time="0"/>
-  <testcase name="shouldSetVolumeMinusMin" classname="ru.netology.RadioTest" time="0"/>
-  <testcase name="shouldSetNumberLessMin" classname="ru.netology.RadioTest" time="0.001"/>
-  <testcase name="shouldIsOnTrue" classname="ru.netology.RadioTest" time="0.124"/>
+  <testcase name="shouldSetVolumeMinusMid" classname="ru.netology.RadioTest" time="0.001"/>
+  <testcase name="shouldSetVolumeMinusMin" classname="ru.netology.RadioTest" time="0.006"/>
+  <testcase name="shouldSetNumberLessMin" classname="ru.netology.RadioTest" time="0"/>
+  <testcase name="shouldIsOnTrue" classname="ru.netology.RadioTest" time="0.005"/>
   <testcase name="shouldSetVolumePlusMax" classname="ru.netology.RadioTest" time="0.001"/>
-  <testcase name="shouldSetVolumePlusMid" classname="ru.netology.RadioTest" time="0.01"/>
+  <testcase name="shouldSetVolumePlusMid" classname="ru.netology.RadioTest" time="0.001"/>
   <testcase name="shouldSetVolumePlusMin" classname="ru.netology.RadioTest" time="0.002"/>
   <testcase name="shouldSetOnTrue" classname="ru.netology.RadioTest" time="0"/>
   <testcase name="shouldSetNumberMoreMax" classname="ru.netology.RadioTest" time="0.002"/>
-  <testcase name="shouldSetNumberNextMax" classname="ru.netology.RadioTest" time="0.002"/>
+  <testcase name="shouldSetNumberNextMax" classname="ru.netology.RadioTest" time="0"/>
   <testcase name="shouldSetNumberNextMid" classname="ru.netology.RadioTest" time="0.001"/>
-  <testcase name="shouldSetNumberNextMin" classname="ru.netology.RadioTest" time="0.003"/>
-  <testcase name="shouldSetOnFalse" classname="ru.netology.RadioTest" time="0.002"/>
-  <testcase name="shouldSetNumberMax" classname="ru.netology.RadioTest" time="0.001"/>
-  <testcase name="shouldSetNumberMid" classname="ru.netology.RadioTest" time="0.001"/>
+  <testcase name="shouldSetNumberNextMin" classname="ru.netology.RadioTest" time="0.001"/>
+  <testcase name="shouldSetOnFalse" classname="ru.netology.RadioTest" time="0"/>
+  <testcase name="shouldSetNumberMax" classname="ru.netology.RadioTest" time="0"/>
+  <testcase name="shouldSetNumberMid" classname="ru.netology.RadioTest" time="0"/>
   <testcase name="shouldSetNumberMin" classname="ru.netology.RadioTest" time="0"/>
+  <testcase name="shouldConstructor1000" classname="ru.netology.RadioTest" time="0.001"/>
   <testcase name="shouldIsOnFalse" classname="ru.netology.RadioTest" time="0.001"/>
 </testsuite>

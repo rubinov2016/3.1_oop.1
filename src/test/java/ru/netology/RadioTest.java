@@ -7,7 +7,7 @@ public class RadioTest {
     @Test
     public void shouldConstructor1000() {
 
-        Radio radio = new Radio(1000,0,100,0,false,0,0); //
+        Radio radio = new Radio(1000); //
 
         int number;
         number = radio.FINAL_NUMBER_MAX;

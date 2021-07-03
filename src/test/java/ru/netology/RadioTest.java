@@ -10,7 +10,7 @@ public class RadioTest {
         Radio radio = new Radio(1000); //
 
         int number;
-        number = radio.numberMax;
+        number = radio.FINAL_NUMBER_MAX;
         radio.setNumber(number);
         //System.out.println(number);
         assertEquals(number, radio.getNumber());
@@ -29,7 +29,7 @@ public class RadioTest {
     public void shouldSetNumberMax() {
         Radio radio = new Radio();
         int number;
-        number = radio.numberMax;
+        number = radio.FINAL_NUMBER_MAX;
         radio.setNumber(number);
         assertEquals(number, radio.getNumber());
     }
@@ -56,7 +56,7 @@ public class RadioTest {
     @Test
     public void shouldSetNumberMoreMax() {
         Radio radio = new Radio();
-        int numberMax = radio.numberMax;
+        int numberMax = radio.FINAL_NUMBER_MAX;
         int numberOut = numberMax + 1;
         radio.setNumber(numberMax);
         radio.setNumber(numberOut);
@@ -87,7 +87,7 @@ public class RadioTest {
     public void shouldSetNumberNextMax() {
         Radio radio = new Radio();
         int number;
-        number = radio.numberMax;
+        number = radio.FINAL_NUMBER_MAX;
         radio.setNumber(number);
         radio.setNumberNext();
         assertEquals(radio.FINAL_NUMBER_MIN, radio.getNumber());
@@ -100,7 +100,7 @@ public class RadioTest {
         number = radio.FINAL_NUMBER_MIN;
         radio.setNumber(number);
         radio.setNumberPrev();
-        assertEquals(radio.numberMax, radio.getNumber());
+        assertEquals(radio.FINAL_NUMBER_MAX, radio.getNumber());
     }
 
     @Test
@@ -117,7 +117,7 @@ public class RadioTest {
     public void shouldSetNumberPrevMax() {
         Radio radio = new Radio();
         int number;
-        number = radio.numberMax;
+        number = radio.FINAL_NUMBER_MAX;
         radio.setNumber(number);
         radio.setNumberPrev();
         assertEquals(number - 1, radio.getNumber());

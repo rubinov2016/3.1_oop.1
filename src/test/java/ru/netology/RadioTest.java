@@ -15,6 +15,7 @@ public class RadioTest {
         assertEquals(number, radio.getNumber());
     }
 
+
     @Test
     public void shouldSetNumberMin() {
         Radio radio = new Radio();

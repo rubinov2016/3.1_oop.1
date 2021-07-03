@@ -5,16 +5,18 @@ public class Radio {
     public int FINAL_NUMBER_MIN = 0;
     public int FINAL_VOLUME_MAX = 100;
     public int FINAL_VOLUME_MIN = 0;
+    public boolean on = false;
 
     public int number; //current value of the station number
     public int volume; //current value of the sound volume
-    public boolean on;
+
 
     public Radio() {
         this.numberMax = 10;
         this.number = FINAL_NUMBER_MIN;
+        this.volume = FINAL_VOLUME_MAX;
         this.volume = FINAL_VOLUME_MIN;
-        on = false;
+        this.on = false;
     }
 
     public Radio(
@@ -23,9 +25,8 @@ public class Radio {
         this.numberMax = numberMax;
         this.number = FINAL_NUMBER_MIN;
         this.volume = FINAL_VOLUME_MIN;
-        on = false;
+        this.on = false;
     }
-
 
     public void setNumber(int number) {
         if (number >= FINAL_NUMBER_MIN && number <= numberMax)

@@ -1,5 +1,6 @@
 package ru.netology;
 
+
 public class Radio {
     public int numberStation = 10;
     public int FINAL_NUMBER_MAX = numberStation - 1;
@@ -43,9 +44,9 @@ public class Radio {
         }
     }
 
-    public int getNumber() {
-        return number;
-    }
+    //   public int getNumber() {
+    //      return number;
+    // }
 
     public void setVolumePlus() {
         if (volume < FINAL_VOLUME_MAX) {
@@ -59,15 +60,15 @@ public class Radio {
         }
     }
 
-    public int getVolume() {
-        return volume;
-    }
+    //  public int getVolume() {
+    //      return volume;
+    //  }
 
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
-    }
+//    public boolean isOn() {
+//        return on;
+//    }
+//
+//    public void setOn(boolean on) {
+//        this.on = on;
+//    }
 }

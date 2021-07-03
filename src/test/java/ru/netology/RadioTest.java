@@ -1,19 +1,21 @@
 package ru.netology;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RadioTest {
     @Test
     public void shouldConstructor1000() {
-        Radio radio = new Radio(1000); //
+
+        Radio radio = new Radio(1000,0,100,0,false,0,0); //
+
         int number;
         number = radio.FINAL_NUMBER_MAX;
         radio.setNumber(number);
         //System.out.println(number);
         assertEquals(number, radio.getNumber());
     }
+
     @Test
     public void shouldSetNumberMin() {
         Radio radio = new Radio();
